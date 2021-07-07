@@ -12,18 +12,20 @@ function mostrarEjemplo(num){
 function cambioTexto(num) {
     var texto = document.getElementById('textocambiante');
     texto.innerHTML = 'Usted apreto el Modo N° ' + num;
-    switch (num) {
+    /*switch (num) {
         case 1:
             texto.innerHTML = 'este texto corresponde al Modo 1';
             break;
         case 2:
-            texto.innerHTML = 'este texto corresponde al Modo 1';
+            texto.innerHTML = 'este texto corresponde al Modo 2';
             break;
         case 3:
-            texto.innerHTML = 'este texto corresponde al Modo 1';
+            texto.innerHTML = 'este texto corresponde al Modo 3';
             break;
         default:
-    }
+            texto.innerHTML = 'este texto corresponde al Modo 3';
+            break;
+    }*/
 }
 
 function cambioClase()
