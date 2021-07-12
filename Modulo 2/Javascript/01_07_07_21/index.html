@@ -30,7 +30,7 @@
                 <label for="exampleInputPassword1" class="form-label">Deporte</label>
                 <input id="deporte" name="deporte" type="text" class="form-control" id="exampleInputPassword1">
             </div>
-            <button onclick="crear()"  class="btn btn-primary mb-2">crear</button>
+            <button onclick="crear()" class="btn btn-primary mb-2">crear</button>
         </div>
     </div>
     <div class="container">
@@ -48,6 +48,26 @@
 
     <script>
         /*La Escuela Café de las 3am solicita un sistema, donde le permita a sus estudiantes presentarse de una manera más interactiva y eficiente , por eso deciden acudir a un programador para crear un sistema, en el cual se podrá ingresar el nombre, edad, actividad favorita y deporte favorito en una tarjeta de presentación predeterminada.*/
+        var inpNombre, inpEdad, inpActividad, inpDeporte;
+        var nombre, edad, actividad, deporte;
+        function crear() 
+        {
+            inpNombre = document.getElementById('nombre').value;
+            inpEdad = document.getElementById('edad').value;
+            inpActividad = document.getElementById('actividad').value;
+            inpDeporte = document.getElementById('deporte').value;
+
+            nombre = document.getElementById('textonombre');
+            edad = document.getElementById('textoedad');
+            actividad = document.getElementById('textoactividad');
+            deporte = document.getElementById('textodeporte');
+
+            nombre.innerHTML = inpNombre;
+            edad.innerHTML = inpEdad;
+            actividad.innerHTML = inpActividad;
+            deporte.innerHTML = inpDeporte;                     
+        }
+
     </script>
 
 
