@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="ejecutar(1)">1</button>
+    <button onclick="ejecutar(2)">2</button>
+    <h1 id="resultado">Resultado</h1>
+    <script>
+        /*
+        function ejecutar(){
+        if(condicion){
+            codigo que se ejecuta si es verdadera la condicion
+        }
+        else{
+            codigo que se ejecuta si la condicion del if es falsa
+        }
+        documen.getElementById('NombreDelIdDelElemento').InnerHTML = "lo que quiero que diga dentro del elemento"
+        }
+        */
+        function ejecutar(num){
+            if(num == 1)
+            {
+                document.getElementById('resultado').innerHTML = "Correcto";
+            }
+            else if(num == 2)
+            {
+                document.getElementById('resultado').innerHTML = "Incorrecto";
+            }
+
+        }
+    </script>
+</body>
+</html>

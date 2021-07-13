@@ -19,25 +19,42 @@
         </div>
     </header>
     <main class="container">
-        <!--Inicio de componenete-->
+        <!--Inicio de Math-->
         <div class="border border-light p-4 rounded m-1">
             <div class="row">
                 <div class="col">
-                    <h3>Titulo del ejemplo</h3>
-                </div>
-                <div class="col p-2 text-end align-text-bottom">
-                    <p>Descripcion del ejemplo en detalle</p>
+                    <h3>Math</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <input id="inp" type="text" class=" form-control">
+                <select class="form-control" name="funcion" id="funcion">
+                    <option> Math.round() </option>
+                    <option> Math.ceil() </option>
+                    <option> Math.floor() </option>
+                    <option> Math.trunc() </option>
+                    <option> Math.sign() </option>
+                    <option> Math.sqrt() </option>
+                    <option> Math.abs() </option>
+                    <option> Math.min() </option>
+                    <option> Math.max() </option>
+                    <option> Math.random() </option>
+                </select>
+            </div>
+                <div class="col">
+                    <input id="num1" type="text" class=" form-control">
                 </div>
                 <div class="col">
-                    <button class="btn btn-success" onclick="accion(num)">Accion</button>
+                    <input id="num2" type="text" class=" form-control">
                 </div>
                 <div class="col">
-                    <p id="res" class=" border rounded border-2 border-light p-1">Resultado</p>
+                    <input id="num3" type="text" class=" form-control">
+                </div>
+                <div class="col">
+                    <button class="btn btn-success" onclick="math()">Accion</button>
+                </div>
+                <div class="col">
+                    <p id="resultado" class=" border rounded border-2 border-light p-1">Resultado</p>
                 </div>
             </div>
         </div>
