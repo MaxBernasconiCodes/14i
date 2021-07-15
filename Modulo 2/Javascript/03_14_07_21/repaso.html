@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="valor" name="valor">
+    <button onclick="repetir()">
+        Repetir
+    </button>
+    <p id="resultado" name="resultado">Resultado</p>
+    <script>
+
+        function repetir() {
+            console.clear();
+
+
+            let valor = document.getElementById('valor').value;
+            valor = parseInt(valor);
+
+
+            for(let i = 1; i <= valor; i++) //fila
+            {
+                for(let j = 1; j<=valor; j++) //celda
+                {
+                    console.log( i.toString()+ " - " + j.toString() );  
+                }
+            }
+
+
+
+
+
+            //basicamente un switch
+            /*if(valor1 == "1")
+            {
+                resultado.innerHTML = "inicial";
+            }
+            else if(valor1 == "2")
+            {
+                resultado.innerHTML ="Secundario";
+            }
+            else if(valor1 == "3")
+            {
+                resultado.innerHTML = "Otro mas";
+            }
+            else if(valor1 == "4")
+            {
+                resultado.innerHTML = "Penultimo";
+            }
+            else if(valor1 == "5")
+            {
+                resultado.innerHTML = "Ultimo"
+            }
+            else{
+                resultado.innerHTML = "nada"
+            }
+            }*/
+
+            // switch (true) {
+
+            //     case (valor1 <= 3):
+            //         resultado.innerHTML = "Menor a 3";
+            //         break;
+            //     case 4:
+            //         resultado.innerHTML = "Penultimo";
+            //         break;
+            //     case 5:
+            //         resultado.innerHTML = "Ultimo";
+            //         break;
+            //     default:
+            //         resultado.innerHTML = "nada";
+            //         break;
+            // }
+        }
+
+
+    </script>
+</body>
+
+</html>
