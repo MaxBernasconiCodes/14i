@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso integral</title>
+</head>
+<body>
+    <script>
+        //declaro la variable resultado como un array para poder ingresar datos
+        let resultado = [];
+        //consulta cuantas veces debe pedir numeros y lo almacena en la variable para usar luego en el ciclo
+        let veces = parseInt(prompt("cuantas veces"))
+        //ejecuta el ciclo, comenzando a contar desde 0, la cantidad de veces igual al ingreso de los datos de el primer prompt
+        for(let i = 0; i < veces; i++)
+        {
+            //solicita un ingreso de datos y lo intenta convertir en numero para procesarlo
+            let dato = parseInt(prompt("ingrese un dato"));
+            if(dato >= 5 )
+            {
+                //en cada vuelta, le asigna a la posicion nueva el valor ingrsado pro el prompt, solo si es mayor que 5
+                resultado[i] = dato;
+            }  
+        }
+        //muestra el resultado del array completo
+            alert(resultado);
+        
+    </script>
+</body>
+</html>

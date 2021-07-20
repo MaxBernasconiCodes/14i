@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios del Campus</title>
+</head>
+
+<body>
+    <input id="entrada" type="text" placeholder="Ingrese algo">
+    <button onclick="procesar()"> Go! </button>
+    <p id="resultado"> Resultado </p>
+</body>
+
+<script>
+
+    //Ejercicio 9
+    function procesar() {
+        //tomamos los datos de el input
+        let datos = document.getElementById('entrada').value;
+        let resultado = "";
+        //procesamos los datos apra filtrar solamente las vocales
+        //creamos un ciclo for para recorrer la palabra ingresada
+        for (let i = 0; i < datos.length; i++) {
+            //analizamos en cada vuelta en la posucion si es igual a alguna vocal
+            if (!(datos[i] == "a"
+                || datos[i] == "e"
+                || datos[i] == "i"
+                || datos[i] == "o"
+                || datos[i] == "u"
+                || datos[i] == " ")) {
+                resultado += datos[i];
+            }
+        }
+        //escribimos los datos en el tag <p>
+        document.getElementById('resultado').innerHTML = resultado;
+    }
+</script>
+
+</html>

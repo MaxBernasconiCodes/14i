@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="francesc ricart" />
+    <title>Eleccion</title>
+    <style>
+        body {
+            min-height: 200vh;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(245deg, rgba(2, 0, 36, 2) 9%, rgba(9, 9, 222, 2) 48%, rgba(0, 222, 255, 2) 200%);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        input {
+            color: rgba(200, 200, 200, 0.8);
+        }
+
+        .panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .fila {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .boton {
+            width: 4rem;
+            height: 4rem;
+            align-items: center;
+            justify-content: center;
+            margin: 4px;
+            border: 2px solid rgb(2, 0, 36);
+            border-radius: 6px;
+            box-shadow: 0 0 10px 2px rgba(0, 222, 255, 0.5);
+            transition: all;
+            transition-duration: 200ms;
+        }
+
+        .boton:hover {
+            box-shadow: 0 0 12px 5px rgba(0, 222, 255, 2);
+            transition-duration: 100ms;
+        }
+
+        .boton:active {
+            transform: scale(0.9);
+            transition-duration: 200ms;
+        }
+        .elegido{
+            color: cadetblue;
+            background-color: teal;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="panel">
+        <h2>Elija una opcion</h2>
+        <div class="fila">
+            <button onclick="elegir(0)"id="btn0" class="boton">1</button>
+            <button onclick="elegir(1)"id="btn1" class="boton">2</button>
+            <button onclick="elegir(2)"id="btn2" class="boton">3</button>
+        </div>
+        <div class="fila">
+            <button onclick="elegir(3)" id="btn3" class="boton">4</button>
+            <button onclick="elegir(4)" id="btn4" class="boton">5</button>
+            <button onclick="elegir(5)" id="btn5" class="boton">6</button>
+        </div>
+        <div class="fila">
+            <button onclick="elegir(6)" id="btn6" class="boton">7</button>
+            <button onclick="elegir(7)" id="btn7" class="boton">8</button>
+            <button onclick="elegir(8)" id="btn8" class="boton">9</button>
+        </div>
+        <div class="fila">
+            <button onclick="limpiar()" id="limpiar" class="boton">Limpiar</button>
+        </div>
+    </div>
+    <script>
+
+
+
+        function elegir(btn) {
+            let boton = parseInt(btn);
+            boton = document.getElementById('btn' + btn);
+            //chequeo si ya esta o no en la lista de elegidos
+            if(!boton.classList.contains('elegido'))
+            {
+                document.getElementById('btn' + btn).classList.add('elegido');
+            }
+            
+        }
+
+        function limpiar() {
+            let botones = [];
+            alert(botones.length);
+            for(let i = 0; i < 9; i++){
+                botones[i] = document.getElementById('btn' + i );
+            }
+            alert(botones.length);
+            for( let i = 0; i < botones.length; i++ ){
+                botones[i].classList.remove('elegido');
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
