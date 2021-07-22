@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="francesc ricart" />
+    <title>Eleccion</title>
+    <link rel="stylesheet" href="styles.css">
+       
+    </style>
+</head>
+
+<body>
+    <div class="panel">
+        <h2>Calculadora</h2>
+        <div class="fila">
+            <input type="text" class="display" id="display" placeholder="0">
+        </div>
+        <div>
+            <div class="fila">
+                <button onclick="elegir('7')" id="btn6" class="boton">7</button>
+                <button onclick="elegir('8')" id="btn7" class="boton">8</button>
+                <button onclick="elegir('9')" id="btn8" class="boton">9</button>
+                <button onclick="operar('mul') " id="mul" class="boton operacion">*</button>
+            </div>
+            <div class="fila">
+                <button onclick="elegir('4')" id="btn3" class="boton">4</button>
+                <button onclick="elegir('5')" id="btn4" class="boton">5</button>
+                <button onclick="elegir('6')" id="btn5" class="boton">6</button>
+                <button onclick="operar('div')" id="div" class="boton operacion">/</button>
+            </div>
+            <div class="fila">
+                <button onclick="elegir('1')" id="btn0" class="boton">1</button>
+                <button onclick="elegir('2')" id="btn1" class="boton">2</button>
+                <button onclick="elegir('3')" id="btn2" class="boton">3</button>
+                <button onclick="operar('res')" id="res" class="boton operacion">-</button>
+                
+            </div>
+            <div class="fila">
+                <button disabled id="btn0" class="boton"></button>
+                <button onclick="elegir(0)" id="btn0" class="boton">0</button>
+                <button onclick="operar('igu')" id="igu" class="boton operacion">=</button>
+                <button onclick="operar('sum')" id="sum" class="boton operacion">+</button>        
+            </div>  
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
