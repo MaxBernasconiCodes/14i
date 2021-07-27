@@ -9,7 +9,23 @@
 </head>
 
 <body>
-
+    <!-- <div class="container">
+        <div class="items-1 item"></div>
+        <div class="items-2 item"></div>
+        <div class="items-3 item"></div>
+        <div class="items-4 item"></div>
+        <div class="items-5 item"></div>
+    </div>
+    <ul>
+        <li>
+            <div class="1 item"></div>
+            <div class="2 item"></div>
+            <div class="3 item"></div>
+            <div class="4 item"></div>
+            <div class="5 item"></div>
+            <div class="6 item"></div>
+        </li>
+    </ul> -->
     <script>
         //Ejercicios de Primera planilla
 
@@ -118,6 +134,112 @@
 
         //Ejercicios con Bucles
 
+        //1- Escribir un programa que solicite la edad y si es mayor de 18 años mostrar un mensaje que ya puede conducir, si la edad ingresada no es un número válido indicarlo en un mensaje.
+        //resolucion
+        // let repetir = true;
+        // do {
+        //     if (18 < parseInt(prompt('Ingrese su edad'))) {
+        //         alert('Usted puede conducir');
+        //         repetir = false;
+        //     }
+        //     else {
+        //         alert('Usted NO puede conducir');
+        //     }
+        // }
+        // while (repetir)
+
+        //Ejercicio 2
+        //2- Escribir un programa que solicite una nota (número) de 0  a 10. Luego mostrar la calificación en un alert según los siguientes rangos de nota:
+
+        // 0-2: Muy deficiente
+        // 3-4: Insuficiente
+        // 5-6: Suficiente
+        // 7: Bien
+        // 8-9: Notable
+        // 10: Sobresaliente
+
+        // Si ingreso un numero que no esté dentro del rango de 0 a 10 mostrar un mensaje de “número erróneo”. Si el numero ingresado no es válido mostrar el mensaje v.
+        //resolucion
+        // let nota = parseInt(prompt('Ingrese la nota'));
+        // switch(nota){
+        //     case 0:
+        //     case 1:
+        //     case 2:
+        //     alert('Muy deficiente');
+        //     break;
+        //     case 3:
+        //     case 4:
+        //     alert('Insuficiente');
+        //     break;
+        //     case 5:
+        //     case 6:
+        //     alert('Suficiente');
+        //     break;
+        //     case 7:
+        //     case 8:
+        //     alert('Notable');
+        //     break;
+        //     case 9:
+        //     case 10:
+        //     alert('Sobresaliente');
+        //     break;
+        //     default: alert('Introduce un  número válido');
+        //     break;
+        //}
+
+        //Ejercicio 3
+        //3- Realiza un script que pida cadenas de texto  hasta que se pulse “cancelar”. Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión -.
+
+        //Nota: usar confirm() https://www.w3schools.com/jsref/met_win_confirm.asp
+
+        // let confirmacion = true;
+        // const textos = [];
+        // while(confirmacion)
+        // {
+        //     textos.push(prompt('ingrese un texto'));
+        //     confirmacion = confirm('Quiere seguir ingresando datos?')
+        // }
+        // document.write(textos.join('-'));
+
+        // Ejercicio 4
+        // 4- Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un «alert» y seguir pidiendo números. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.
+
+        // let repetir = true;
+        // let sumatoria = 0;
+        
+        // while(repetir)
+        // {    
+        //     let resultado = parseInt(prompt("ingrese un numero"));
+        //     if(!isNaN(resultado))
+        //     {
+        //         sumatoria += resultado;
+        //         repetir = confirm('¿quiere continuar?');
+        //     }
+        //     else{
+        //         alert('El dato ingresado no es un numero');
+        //     }
+        // }
+        // alert('la suma total es: ' + sumatoria);
+        
+         
+         
+
+        // Ejercicio 5
+        //Ejercicio 5 
+        //El algoritmo para calcular la letra del dni es el siguiente :
+
+        // El número debe ser entre 0 y 99999999
+        // Debemos calcular el resto de la división entera entre el número y el número 23.
+        // Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes:  (T, R, W,A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E)
+        // Si lo introducido no es un número deberá indicarse con un alert y volver a preguntar.
+        // Deberá de repetirse el proceso hasta que el usuario pulse «cancelar».
+        //resolucion
+        // let dni = 32521936;
+        // const letras = ['T', 'R', 'W','A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+        // let resto = dni % 23;
+        // console.log(resto);
+        // console.log(letras[resto]);
+
         //Ejercicio 6
         //6- Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma :
         // 1
@@ -128,10 +250,10 @@
         // 666666
 
         //Resolucion
-        // for(let i = 1; i <=30; i++)
+        // for(let i = 1; i <= 30; i++)
         // {
         //     //antes de J
-            
+
         //     for(let j = 1; j<= i; j++)
         //     {
         //         document.write(i);
@@ -139,6 +261,132 @@
         //     //despúes de J
         //     document.write("<br>");
         // }
+
+
+        //Ejercicio 7
+        // 7- Haz un script que escriba una pirámide inversa de los números del 1 al número que indique el usuario (no mayor de 50)  de la siguiente forma : (suponiendo que indica 30).
+
+        // 303030303030303030303030303030303030303030303030303030303030
+        // 2929292929292929292929292929292929292929292929292929292929
+        // 28282828282828282828282828282828282828282828282828282828
+        // …..
+        // 333
+        // 22
+        // 1
+        //Resolucion
+        //TODO: Para la clase del 28 hacer
+
+        //Ejercicio 8
+        //8- Crea script para generar pirámide siguiente con los números  del 1 al número que indique el usuario (no mayor de 50) 
+
+        // 1
+        // 12
+        // 123
+        // 1234
+        // 12345
+        // 123456
+        // ……
+        //Resolucion
+        //TODO: Para la clase del 28 hacer
+
+        //Ejercicio 9
+        // 9- Crea un script que escriba los números del 1 al 500, que indique cuáles son múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por ejemplo :
+
+        // 1
+        // 2
+        // 3
+        // 4 (Múltiplo de 4)
+        // 5-
+        // ————————————————————-
+
+        // 6
+        // 7
+        // 8 (Múltiplo de 4)
+        // 9 (Múltiplo de 9)
+        // 10
+        //Resolucion
+        // for(let i = 1; i <= 500; i++)
+        // {
+        //     document.write(i);
+        //     if(i % 4 == 0)
+        //     {
+        //         document.write(' (Múltiplo de 4)');
+        //     }
+        //     if(i % 9 == 0)
+        //     {
+        //         document.write(' (Múltiplo de 9)');
+        //     }
+        //     document.write('<br>');
+        //     if(i % 5 == 0)
+        //     {
+        //         document.write(' -----------------------------------------------------');
+        //         document.write('<br>');
+        //     }
+        // }
+
+        //Ejercicio 10
+        // 10- Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro cada una de las celdas deberá escribirse un número consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7×5 los números irán del 35 al 1.
+        //Resolucion
+
+        const filas = parseInt(prompt('ingrese el numero de filas'));
+        const columnas = parseInt(prompt('ingrese el numero de filas'));
+        let celdas = filas * columnas;
+
+        document.write('<table border>');
+        for(let i = filas; i > 0; i--)
+        {
+            document.write('<tr>');
+            for(let j = columnas; j > 0; j--)
+            {
+                document.write('<td>' +  (celdas) + '</td>');
+                celdas--;
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+
+        ///////////////////////////////////////////////////////////////////
+        // Ejercicios con Math
+
+
+        //Ejercicio 11
+        // 11- Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor. *
+        // Nota: ver funcion Math() https://www.w3schools.com/js/js_math.asp
+        //Resolucion
+
+
+        //Ejercicio 12
+        // 12- Realiza un script que genere un número aleatorio entre 1 y 99
+        //Resolucion
+
+        ///////////////////////////////////////////////////////////////////
+        //  Ejercicios con String
+
+
+        //Ejercicio 13
+        // 13- Realiza un script que pida un texto y lo muestre en mayúsculas.
+        //Resolucion
+
+
+        //Ejercicio 14
+        // 14- Realiza un script que pida una cadena de texto y lo muestre      poniendo el signo – entre cada carácter sin usar el método replace. Por     ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”.
+        //Resolucion
+
+
+        //Ejercicio 15
+        // 15- Realiza un script que cuente el número de vocales que tiene un       texto.
+        //Resolucion
+
+
+        //Ejercicio 16
+        // 16- Realiza un script que pida una cadena de texto y la devuelva al      revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”.
+        //Resolucion
+
+
+        //Ejercicio 17
+        // 17- Realiza un script que muestre la posición de la primera vocal de un      texto introducido por teclado.
+        //Resolucion
+
     </script>
 </body>
 
