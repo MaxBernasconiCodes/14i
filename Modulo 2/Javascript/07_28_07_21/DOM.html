@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1 id="titulo" name="dom" >DOM</h1>
+    <h2 id="subtitulo" name="dom" >Subtitulo</h2>
+    <h2 id="subtitulo2" name="dom" >Subtitulo 2</h2>
+
+<script>
+    let titulo = document.getElementById('titulo');
+    console.log(titulo);
+    let titulos = document.getElementsByName('dom');
+    console.log(titulos);
+    let subtitulos = document.getElementsByTagName('h2');
+    console.log(subtitulos);
+    let nuevoSub = document.createElement('h3');
+    console.log(nuevoSub);
+    nuevoSub.innerHTML = 'Este es un elemento virtual';
+    console.log(nuevoSub);
+    for(let i = 0; i< titulos.length; i++)
+    {
+        console.log(titulos[i]);
+    }
+    
+    titulo.style.border = 'solid 2px black';
+</script>
+</body>
+</html>
