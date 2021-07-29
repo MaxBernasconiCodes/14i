@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Object Model</title>
 </head>
-<body>
-    <h1 id="titulo" name="dom" >DOM</h1>
-    <h2 id="subtitulo" name="dom" >Subtitulo</h2>
-    <h2 id="subtitulo2" name="dom" >Subtitulo 2</h2>
 
-<script>
-    let titulo = document.getElementById('titulo');
-    console.log(titulo);
-    let titulos = document.getElementsByName('dom');
-    console.log(titulos);
-    let subtitulos = document.getElementsByTagName('h2');
-    console.log(subtitulos);
-    let nuevoSub = document.createElement('h3');
-    console.log(nuevoSub);
-    nuevoSub.innerHTML = 'Este es un elemento virtual';
-    console.log(nuevoSub);
-    for(let i = 0; i< titulos.length; i++)
+<body>
+
+    <input type="text" id="valor" placeholder="Inserte una tarea nueva">
+    <button onclick="agregartarea()" id="boton">Enviar</button>
+    <button onclick="quitarTarea()" id="boton">Quitar</button>
+    <h2>Tareas:</h2>
+    <ul id="tareas" style="color:white; border: 2px white solid;border-radius: 4px;">
+
+    </ul>
+
+    <script>
+
+        let body = document.body;
+        let lista = document.getElementById('tareas');
+        let input = document.getElementById('valor');
+        let contador = 0;
+        body.style.backgroundColor = "#000";
+        body.style.color = "#FFF";
+
+
+
+        function agregartarea() {
+            let tareaNueva = input.value;
+            if (tareaNueva != '' 
+            && tareaNueva != null 
+            && typeof tareaNueva != 'undefined') 
+            {
+                let liNuevo = document.createElement('li');
+                liNuevo.innerText = tareaNueva;
+                liNuevo.id = contador;
+                contador++;
+                lista.append(liNuevo);
+                lista.append('texto 1 es este')
+                lista.appendChild('Texto dos es este');
+                input.value = "";
+            }
+        }
+        
+        function quitarTarea(id)
     {
-        console.log(titulos[i]);
+        let tareaASacar = document.getElementById(id);
+        tareaASacar.remove();
     }
+    </script>
     
-    titulo.style.border = 'solid 2px black';
-</script>
 </body>
+
 </html>
