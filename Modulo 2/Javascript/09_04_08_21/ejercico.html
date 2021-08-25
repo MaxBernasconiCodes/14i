@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercico DOM</title>
+</head>
+<body>
+
+    
+    <button id="btnAgregar">Nueva Tirada</button>
+    <ul id="lista">
+
+    </ul>
+
+    <script>
+        /*
+        1- Tomar el/los elemento/s donde vamos a operar
+        2- Agregamos el evento clik al boton 
+        3- Creamos un elemnto li para agregarle el valor y agrrgarlo a la lista
+
+
+        */
+        function nuevoRandom(){
+            let numRandom = Math.floor(Math.random() * 100);
+            return numRandom;
+        }
+
+        const obj1 = "esto";
+        const obj2 = obj1;
+        let veracidad = obj1 === obj2;
+        console.log(`%ces:${veracidad}`, 'color:green');
+    </script>
+</body>
+</html>

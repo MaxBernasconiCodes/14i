@@ -31,17 +31,12 @@
 
         function agregartarea() {
             let tareaNueva = input.value;
-            if (tareaNueva != '' 
-            && tareaNueva != null 
-            && typeof tareaNueva != 'undefined') 
-            {
+            if (tareaNueva != '' && tareaNueva != null && typeof tareaNueva != 'undefined') {
                 let liNuevo = document.createElement('li');
                 liNuevo.innerText = tareaNueva;
                 liNuevo.id = contador;
                 contador++;
                 lista.append(liNuevo);
-                lista.append('texto 1 es este')
-                lista.appendChild('Texto dos es este');
                 input.value = "";
             }
         }
@@ -52,7 +47,6 @@
         tareaASacar.remove();
     }
     </script>
-    
 </body>
 
 </html>

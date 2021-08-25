@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Administracion</h1>
+    <button onclick="crearUsuario()">Agregar usuario</button>
+    <button onclick="mostrarUsuarios(usuarios)">Mostrar usuarios</button>
+
+    <ul id="listado">
+
+    </ul>
+
+    <script>
+        let usuarios = [];
+        let listado = document.getElementById('listado');
+
+        function crearUsuario()
+        {
+            let nombre = prompt('Ingrese el nombre del usuario');
+            let password = prompt('Ingrese el password ');
+            let usuario = [];
+            usuario.push(nombre);
+            usuario.push(password);
+            usuarios.push(usuario); 
+        }
+
+        function mostrarUsuarios(listadoUsuarios){
+            listadoUsuarios.forEach(user => {
+                let nuevoLi = document.createElement('li');
+                nuevoLi.innerHTML = 'Usuario: ' + user[0] + ' | ' + user[1];
+                listado.append(nuevoLi);
+            });
+        }
+
+
+
+
+    </script>
+</body>
+</html>

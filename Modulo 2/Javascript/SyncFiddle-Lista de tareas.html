@@ -1,0 +1,65 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.min.js"></script>
+<style>
+body {
+  font-family: "monospace", Helvetica, sans-serif;
+  background-color: grey;
+}
+</style>
+
+<script defer>
+  
+  let arrayTareas = [];
+  if(localStorage.getItem('tareas'))
+  {
+    arrayTareas = JSON.parse(localStorage.getItem('tareas'));
+  }
+  
+  class Tarea {
+    constructor(texto){
+      this.texto = texto;
+    }
+  }
+  
+  function agregar() {
+    let valorTexto = document.getElementById('caja');
+    let tareanueva = new Tarea(valorTexto.value);
+    arrayTareas.push(tareanueva);
+    localStorage.setItem('tareas', JSON.stringify(arrayTareas));
+    console.log(arrayTareas);
+    valorTexto.value="";
+    valorTexto.focus();
+  }
+  
+  function eliminar(){
+    let itemABorrar = document.getElementById('eliminar');
+    arrayTareas.splice(parseInt(itemABorrar.value),1);
+    localStorage.setItem('tareas', JSON.stringify(arrayTareas));
+    console.log(arrayTareas); 
+  }
+  
+  function recargarListado()
+  {
+    let tareasUl = document.getElementById('Lista');
+    tareasUl.innerHTML = '';
+    
+    
+    
+  }
+
+
+</script>
+
+<body>
+ <input id="caja" type="text" placeholder="Nueva tarea"/>
+ <button onclick="agregar()">Agregar</button>
+  <br>
+ <input id="eliminar" type="number" placeholder="Numero de tarea a eliminar" />
+ <button onclick="eliminar()">Eliminar</button>
+ 
+  <h2>listado de tareas</h2>
+ <ul id="Lista">
+ </ul>
+  
+</body>
+  
